@@ -46,8 +46,10 @@ class LLaMA {
   }
 
   async add(...models) {
+    // Default model
     if (models.length === 0) models = ["7B"];
 
+    // Check model name
     models = models.map((m) => {
       return m.toUpperCase();
     });
